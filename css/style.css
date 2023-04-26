@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#120404 50%, rgb(66, 11, 11) 75%,  rgb(104, 18, 18) 100%);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 360px;
+    height: 550px;
+    transform-style: preserve-3d;
+    perspective: 480px;
+    overflow: hidden;
+}
+
+.card {
+    width: 360px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+}
+
+.card img {
+    width: inherit;
+    height: 400px;
+    position: absolute;
+    transition: all .7s ease;
+    left: 0;
+}
+
+.box__menu {
+    width: 260px;
+    height: 400px;
+    background: #a5a;
+    left: -180px;
+    transform: rotateY(-90deg);
+    transition: all 0.7s ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background: #ebbd32;
+}
+
+.box__menu__info {
+    width: inherit;
+    height: 200px;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box__menu__info h1 {
+    font-size: 18px;
+    color: #da264a; 
+}
+
+.box__menu__info h2 {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.box__menu__links {
+    margin-top: 10px;
+    display: flex;
+    gap: 6px;
+}
+
+.box__menu__link {
+    width: 30px;
+    background: #222;
+    color: #fff;
+    padding: 5px;
+    transition: background .3s ease-in-out;
+}
+
+.box__menu__link:hover {
+    background: #da264a;
+}
+
+.box:hover .box__menu {
+    left: 0px;
+    transform: rotateY(0deg);
+}
+
+.box:hover .box__img img {
+    left: 120px;
+    filter: brightness(0.3);
+}
+
